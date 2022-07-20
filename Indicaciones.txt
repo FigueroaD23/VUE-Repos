@@ -1,0 +1,43 @@
+para instalar global se usa:
+
+VUE
+npm install -g @vue/cli
+vue create nombre
+
+REACT
+npm install -g create-react-app
+
+
+Para usar local se usa:
+
+npx create-react-app nombre
+npx @vue/cli create nombre
+
+
+
+Para correr:
+
+React
+npm start (development server)
+npm run build
+
+Vue
+npm run serve (development server)
+npm run build 
+
+
+
+CON VITE 
+npm create vite@latest pruebareact-vite --template react
+npm create vite@latest pruebareact-vite --template vue
+
+para correr:
+npm run dev
+
+
+NUXT 
+npx create-nuxt-app nombre
+npm run dev
+
+npm run build 
+npm run start para cuando ya está en build 
