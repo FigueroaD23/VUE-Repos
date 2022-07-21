@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-5">
+    <P>{{this.$store.state.userData}}</P>
     <h3 style="display:inline-block">ToDo con Vue 2 y Vite</h3><img src="./assets/logo.png" alt="Vue-logo" width="50" height="50" class="mb-2">
     <input type="text" autofocus placeholder="Agrega una tarea" class="form-control my-3" v-model="nuevaTarea" @keyup.enter="agregarTarea">
     <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
