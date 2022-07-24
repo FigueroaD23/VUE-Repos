@@ -35,9 +35,13 @@ para correr:
 npm run dev
 
 
-NUXT 
+NUXT ----version 2
 npx create-nuxt-app nombre
 npm run dev
 
 npm run build 
 npm run start para cuando ya está en build 
+
+NUXT ----version 3
+npx nuxi init nombreprojecto
+npm run dev -- -o
