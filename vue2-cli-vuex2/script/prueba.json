@@ -1,0 +1,17 @@
+[
+    {
+        "nombre":"Curso 1",
+        "plataforma":"Udemy",
+        "instructor":"Fernando Herrera"
+    },
+    {
+        "nombre":"Curso 2",
+        "plataforma":"Platzi",
+        "instructor":"Ignacio Valderrama"
+    },
+    {
+        "nombre":"Curso 3",
+        "plataforma":"EDTeam",
+        "instructor":"Carlos Arturo"
+    }
+]
