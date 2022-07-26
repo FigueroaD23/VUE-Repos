@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     numero:0,
+    nombre:"prueba nombre desde el store",
     pokemones: []
   },
   //se usan para mutar o modificar el estado y se llama con commit('nombreMutation')
@@ -23,7 +24,7 @@ export default new Vuex.Store({
   actions:{
     async obtenerPokemones({commit}){
       try {
-        const pokemonesAsync = await (await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0')).json()
+        const pokemonesAsync = await (await fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')).json()
         console.log(pokemonesAsync)
         commit('SetPokemones',pokemonesAsync.results)
 
@@ -46,6 +47,9 @@ export default new Vuex.Store({
     //como segundo argumento pueden recibir el mismo objeto getters para mandar a llamar algún otro que se necesite
     getNumeroOperacion(state,getters){
       return state.numero + getters.getNumero
+    },
+    getNombre(state,getters){
+      return (state.nombre + '' + getters.getNumero)
     }
 
   }

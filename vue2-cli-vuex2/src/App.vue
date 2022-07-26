@@ -4,11 +4,11 @@
     <h1>Pruebas con Vuex 3</h1>
     <div style="width:90%; border:1px solid lightgray; margin:0 auto;">
       <h5>Numero desde el store normal: {{getNumeroOperacion}}</h5>
-      <h5>Numero desde el store normal: {{numero}}</h5>
-      <h5>Numero desde el store normal: {{prueba}}</h5>
+      <h5>Numero desde el store normal: {{numero}}</h5>      
       <h5>Numero desde el store normal: {{this.$store.state.numero}}</h5>
-      <h5>Numero desde el store normal: {{this.$store.state.numero}}</h5>
-      <h5>Numero desde el store normal: {{this.$store.state.numero}}</h5>
+      <h5>Numero en computed SIN mapeadores: {{nombrePrueba}}</h5>
+      <h5>propiedad computada: {{prueba}}</h5>
+      <h5>Nombre: {{getNumero}}</h5>
       <div v-if="pokemones.length>0">
         <ul v-for="pokemon of pokemones" :key="pokemon.name">
           <li>{{pokemon.name}}</li>
@@ -29,10 +29,21 @@ export default {
     this.obtenerPokemones()
   },
   computed:{
+    //state de forma directa en un computed
+    nombrePrueba(){
+      return this.$store.state.nombre
+    },
+    //state en un mapeador
     ...mapState(['numero','pokemones']),
-    ...mapGetters(['getNumeroOperacion']),
+    //getter directo en un computed
+    getNumero(){
+      return this.$store.getters.getNumero
+    },
+    //getter en un mapeador
+    ...mapGetters(['getNumeroOperacion','getNombre']),
+    //propiedad computada normal
     prueba(){
-      return this.numero + 10000
+      return this.pokemones.filter(pokemon=>pokemon.name.length>9)
     }    
   },
   methods:{
