@@ -45,3 +45,9 @@ npm run start para cuando ya está en build
 NUXT ----version 3
 npx nuxi init nombreprojecto
 npm run dev -- -o
+
+
+
+NEXT
+npx create-next-app@latest
+npm run dev
