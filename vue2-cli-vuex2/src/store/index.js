@@ -22,6 +22,7 @@ export default new Vuex.Store({
   //se usan para poner logica, pueden ser asincronas y lo ideal es llamar a las mutaciones desde aquí
   //las actions se llaman con dispatch('nombreAction')
   actions:{
+    pruebaDirecta(context){console.log("pruba directa del store",context)},
     async obtenerPokemones({commit}){
       try {
         const pokemonesAsync = await (await fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')).json()

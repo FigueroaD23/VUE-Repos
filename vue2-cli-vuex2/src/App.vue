@@ -27,6 +27,7 @@ export default {
   created(){
     console.log("desde el created",this.pokemones)
     this.obtenerPokemones()
+    this.metododirectoStore()
   },
   computed:{
     //state de forma directa en un computed
@@ -47,8 +48,13 @@ export default {
     }    
   },
   methods:{
-    ...mapMutations(['aumentar']),
-    ...mapActions(['obtenerPokemones'])
+    //actions directo en los methods
+    metododirectoStore(){
+      this.$store.dispatch("pruebaDirecta")
+    },
+    //actions con mapeador
+    ...mapActions(['obtenerPokemones']),    
+    ...mapMutations(['aumentar'])
   }
 }
 </script>
