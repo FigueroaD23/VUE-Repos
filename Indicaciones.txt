@@ -48,6 +48,6 @@ npm run dev -- -o
 
 
 
-NEXT
+NEXT (1:04min)
 npx create-next-app@latest
 npm run dev
